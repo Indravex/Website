@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Plus, Minus, ChevronDown, ChevronUp, Headphones, Mail, Phone, MapPin, Globe, Send, ArrowUpRight, Loader2, ShieldCheck } from "lucide-react";
 import Separator from "./Separator";
