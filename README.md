@@ -16,7 +16,6 @@ Official web application for **Indravex Technologies**, delivering cutting-edge 
 
 ## 🚀 Key Features
 
-- **Interactive AI Console**: Embedded prompt sandbox console integrated with Google Gemini API (`@google/genai`).
 - **Domain Solutions**: Tailored web and AI architectural showcases for Healthcare, Hospitality, and Enterprise sectors.
 - **Interactive UI & Motion**: Modern smooth-scroll powered by Lenis, vector magnet lines animations, and Framer Motion transitions.
 - **Contact & Lead System**: Built-in functional contact workflow integrated with Web3Forms API.
