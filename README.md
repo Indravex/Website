@@ -125,18 +125,18 @@ The application is optimized for zero-config deployment on [Vercel](https://verc
 
 ## 📄 License
 
-**Copyright © 2026 Qubrik Technologies. All Rights Reserved.**
+**Copyright © 2026 Quabrik Technologies. All Rights Reserved.**
 
-This repository contains proprietary software developed by **Qubrik Technologies** exclusively for **Indravex Technologies**.
+This repository contains proprietary software developed by **Quabrik Technologies** exclusively for **Indravex Technologies**.
 
 ### White-Label Authorization
 
-Qubrik Technologies grants **Indravex Technologies** an exclusive white-label licence for this software. Under this agreement:
+Quabrik Technologies grants **Indravex Technologies** an exclusive white-label licence for this software. Under this agreement:
 
 - The software may be branded, marketed, deployed, and publicly presented solely under the **Indravex Technologies** name.
 - Public-facing websites, applications, documentation, and marketing materials may identify **Indravex Technologies** as the developer, provider, or owner of the software.
-- **Qubrik Technologies** is not required to be publicly credited or referenced unless mutually agreed in writing.
-- This white-label licence is granted exclusively to **Indravex Technologies** and may not be transferred, sublicensed, or assigned to any third party without prior written permission from **Qubrik Technologies**.
+- **Quabrik Technologies** is not required to be publicly credited or referenced unless mutually agreed in writing.
+- This white-label licence is granted exclusively to **Indravex Technologies** and may not be transferred, sublicensed, or assigned to any third party without prior written permission from **Quabrik Technologies**.
 
 ### Authorized Use
 
@@ -144,7 +144,7 @@ This source code is licensed solely for the development, deployment, maintenance
 
 ### Restrictions
 
-Without prior written permission from **Qubrik Technologies**, you may NOT:
+Without prior written permission from **Quabrik Technologies**, you may NOT:
 
 - Copy, reproduce, distribute, or disclose any part of this source code.
 - Modify, adapt, or create derivative works except as authorised for **Indravex Technologies**.
@@ -153,15 +153,15 @@ Without prior written permission from **Qubrik Technologies**, you may NOT:
 - Remove, modify, or obscure any copyright, ownership, or attribution notices.
 - Reverse engineer, decompile, or attempt to extract proprietary logic where prohibited by law.
 - Publish this repository or make its contents publicly available.
-- Use this source code, in whole or in part, for training AI models or automated code-generation systems without prior written permission from **Qubrik Technologies**.
+- Use this source code, in whole or in part, for training AI models or automated code-generation systems without prior written permission from **Quabrik Technologies**.
 
 ### Ownership
 
-- **Software Developer:** Qubrik Technologies
-- **Copyright Holder:** Qubrik Technologies
+- **Software Developer:** Quabrik Technologies
+- **Copyright Holder:** Quabrik Technologies
 - **Exclusive White-Label Licensee:** Indravex Technologies
 
-Unless otherwise agreed in writing, all intellectual property rights remain the exclusive property of **Qubrik Technologies**.
+Unless otherwise agreed in writing, all intellectual property rights remain the exclusive property of **Quabrik Technologies**.
 
 Any unauthorised copying, modification, distribution, disclosure, or commercial use of this software outside the scope of this licence is strictly prohibited and may result in legal action.
 
