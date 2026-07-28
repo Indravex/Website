@@ -1,0 +1,24 @@
+{
+  "short_name": "Indravex",
+  "name": "Indravex Technologies",
+  "description": "Enterprise Engineering & Digital Solutions",
+  "icons": [
+    {
+      "src": "/IT.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/IT.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F3EAD8",
+  "theme_color": "#004BFF",
+  "display": "standalone",
+  "orientation": "portrait"
+}

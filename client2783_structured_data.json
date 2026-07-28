@@ -1,0 +1,453 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://indravex.com/#organization",
+      "name": "Indravex Technologies",
+      "url": "https://indravex.com/",
+      "logo": "https://indravex.com/logo.png",
+      "description": "Engineering Digital Intelligence for a Smarter Tomorrow. We build scalable digital products and AI-driven solutions.",
+      "email": "indravextechnologies@gmail.com",
+      "telephone": "+91-999999999",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pimple Gurav",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "sameAs": [],
+      "foundingLocation": "Pune, Maharashtra, India",
+      "slogan": "Engineering Digital Intelligence for a Smarter Tomorrow",
+      "areaServed": [
+        "India",
+        "San Francisco",
+        "London",
+        "Singapore"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile Application Development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Software Development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI & Automation Solutions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Marketing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IT Staffing Solutions"
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Mobile App Development",
+        "Custom Software Development",
+        "AI & Automation",
+        "Digital Marketing",
+        "IT Staffing",
+        "Web Development",
+        "Generative AI",
+        "SaaS Development"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://indravex.com/#website",
+      "url": "https://indravex.com/",
+      "name": "Indravex Technologies",
+      "publisher": {
+        "@id": "https://indravex.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://indravex.com/#home",
+      "url": "https://indravex.com/",
+      "name": "Home | Indravex Technologies",
+      "isPartOf": {
+        "@id": "https://indravex.com/#website"
+      },
+      "about": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "description": "From company ideas to product launch, we design, develop, automate, and scale modern digital products using AI-powered technology, Web Development, and enterprise-grade engineering.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "What We Do",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "position": 1,
+            "name": "Web Development",
+            "description": "Custom Websites that are Fast, Responsive & SEO Friendly.",
+            "additionalProperty": [
+              "Responsive Design",
+              "SEO Optimized",
+              "Fast Loading",
+              "CMS Integration"
+            ]
+          },
+          {
+            "@type": "Service",
+            "position": 2,
+            "name": "Mobile Application Development",
+            "description": "Android, iOS & Cross-Platform Apps for your business.",
+            "additionalProperty": [
+              "Native & Cross-Platform",
+              "UI/UX Design",
+              "App Store Optimization",
+              "Push Notifications"
+            ]
+          },
+          {
+            "@type": "Service",
+            "position": 3,
+            "name": "Custom Software Development",
+            "description": "Tailored Software Solutions designed to fit unique business needs.",
+            "additionalProperty": [
+              "Custom Solutions",
+              "Scalable Architecture",
+              "Integration Ready",
+              "Maintenance Support"
+            ]
+          },
+          {
+            "@type": "Service",
+            "position": 4,
+            "name": "AI & Automation Solutions",
+            "description": "Automate Workflows, Save Time & Boost Productivity.",
+            "additionalProperty": [
+              "AI-Powered Automation",
+              "Smart Workflows",
+              "Cost Reduction",
+              "24/7 Operations"
+            ]
+          },
+          {
+            "@type": "Service",
+            "position": 5,
+            "name": "Digital Marketing",
+            "description": "SEO, PPC, Social Media, and Content that Drives Real Results.",
+            "additionalProperty": [
+              "SEO & PPC",
+              "Social Media Marketing",
+              "Content Strategy",
+              "Analytics & Reporting"
+            ]
+          },
+          {
+            "@type": "Service",
+            "position": 6,
+            "name": "IT Staffing Solutions",
+            "description": "Access top IT talent quickly and efficiently to scale your teams.",
+            "additionalProperty": [
+              "Top IT Talent",
+              "Quick Hiring",
+              "Flexible Engagement",
+              "Team Augmentation"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://indravex.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What technologies does indravex support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the custom AI integration work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you audit or scale existing cloud architectures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the standard contract project lifecycle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://indravex.com/services#web-development",
+      "name": "Website Development",
+      "provider": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "description": "We create stunning, high-performance websites optimized for search engines and designed to convert visitors into customers.",
+      "serviceType": [
+        "SEO Friendly Website Development",
+        "Custom Business Website Development",
+        "Professional Website Design",
+        "Corporate & E-commerce Development",
+        "React & Modern Stack Development",
+        "Startup Website Development"
+      ],
+      "url": "https://indravex.com/contact"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://indravex.com/services#digital-marketing",
+      "name": "Digital Marketing",
+      "provider": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "description": "Comprehensive digital marketing solutions including SEO, social media marketing, performance marketing, and Google Ads management.",
+      "serviceType": [
+        "SEO Services",
+        "Social Media Marketing",
+        "Google Ads Management",
+        "Performance Marketing",
+        "Lead Generation Services",
+        "Content Marketing"
+      ],
+      "url": "https://indravex.com/contact"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://indravex.com/services#ai-solutions",
+      "name": "AI Solutions",
+      "provider": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "description": "Development and integration of advanced AI solutions including generative AI, machine learning models, and intelligent automation systems.",
+      "serviceType": [
+        "AI Consulting Services",
+        "Generative AI Solutions",
+        "AI Software Development",
+        "AI Integration Services",
+        "Enterprise AI Solutions",
+        "AI Powered Applications"
+      ],
+      "url": "https://indravex.com/contact"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://indravex.com/services#custom-software",
+      "name": "Custom Software Development",
+      "provider": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "description": "Scalable, secure, high-performance custom software applications for startups, SMEs, and enterprises.",
+      "serviceType": [
+        "Custom Software Development",
+        "Enterprise Software Solutions",
+        "CRM & ERP Development",
+        "Business Management Systems",
+        "API Development & Integration",
+        "Software Maintenance & Support"
+      ],
+      "url": "https://indravex.com/contact"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://indravex.com/services#application-development",
+      "name": "Application Development",
+      "provider": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "description": "Robust, scalable applications across web, mobile, enterprise, and SaaS platforms with full-stack development capabilities.",
+      "serviceType": [
+        "Custom Application Development",
+        "Mobile App Development (Android & iOS)",
+        "Web Application Development",
+        "Enterprise Application Development",
+        "SaaS Application Development",
+        "Full Stack Development"
+      ],
+      "url": "https://indravex.com/contact"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://indravex.com/services#it-staffing",
+      "name": "IT Staffing",
+      "provider": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "description": "IT staffing services help organizations find highly skilled developers, designers, QA engineers, DevOps professionals, and project managers.",
+      "serviceType": [
+        "Dedicated Development Team",
+        "Contract & Permanent Staffing",
+        "Remote IT Professionals",
+        "Technical Resource Augmentation",
+        "Software Developers & QA Engineers",
+        "Quick Hiring Process"
+      ],
+      "url": "https://indravex.com/contact"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://indravex.com/about#aboutpage",
+      "url": "https://indravex.com/about",
+      "name": "About Us | Indravex Technologies",
+      "isPartOf": {
+        "@id": "https://indravex.com/#website"
+      },
+      "about": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Indravex Technologies",
+        "description": "Indravex Technologies was born from a vision to bridge the gap between traditional engineering and artificial intelligence. We help enterprises transition from legacy systems to intelligent digital ecosystems.",
+        "slogan": "Driving the Cognitive Revolution",
+        "numberOfEmployees": {
+          "@type": "QuantitativeValue",
+          "value": "150+"
+        },
+        "award": "5+ Global Projects Delivered",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "Years of Innovation",
+            "value": "1+"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Expert Engineers",
+            "value": "15+"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Global Projects",
+            "value": "5+"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Support",
+            "value": "24/7"
+          }
+        ],
+        "values": [
+          "Agile Innovation",
+          "Radical Transparency",
+          "Engineering Rigor",
+          "Security by Design"
+        ]
+      },
+      "review": {
+        "@type": "Review",
+        "reviewBody": "localhost is more than a vendor; they are our technical backbone.",
+        "author": {
+          "@type": "Person",
+          "jobTitle": "CTO",
+          "name": "Leading Fintech Client"
+        }
+      }
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://indravex.com/contact#contactpage",
+      "url": "https://indravex.com/contact",
+      "name": "Contact Us | Indravex Technologies",
+      "isPartOf": {
+        "@id": "https://indravex.com/#website"
+      },
+      "about": {
+        "@id": "https://indravex.com/#organization"
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Indravex Technologies",
+        "email": "indravextechnologies@gmail.com",
+        "telephone": "+91-7666506689",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Pimple Gurav",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "General Inquiry",
+            "email": "indravextechnologies@gmail.com",
+            "telephone": "+91-7666506689",
+            "areaServed": [
+              "IN",
+              "US",
+              "GB",
+              "SG"
+            ],
+            "availableLanguage": [
+              "English",
+              "Hindi"
+            ]
+          }
+        ],
+        "location": [
+          {
+            "@type": "Place",
+            "name": "Pune (HQ)"
+          },
+          {
+            "@type": "Place",
+            "name": "San Francisco"
+          },
+          {
+            "@type": "Place",
+            "name": "London"
+          },
+          {
+            "@type": "Place",
+            "name": "Singapore"
+          }
+        ]
+      }
+    }
+  ]
+}

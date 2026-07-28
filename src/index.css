@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  --color-bg-primary: #FFFFFF;
+  --color-bg-alt: #F0F4FF;
+  --color-bg-variation: #E2EAF8;
+  
+  --color-primary-navy: #0B143E;
+  --color-accent-blue: #0000FF;
+  
+  --color-text-primary: #000000;
+  --color-text-secondary: #4D4D4D;
+  --color-text-muted: #787878;
+}
+
+@layer base {
+  body {
+    background-color: #FFFFFF;
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Premium Custom Shadows as requested (0 40px 120px rgba(0,0,0,0.08)) */
+.shadow-premium {
+  box-shadow: 0 40px 120px rgba(11, 20, 62, 0.06);
+}
+
+.shadow-premium-hover {
+  transition: box-shadow 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.shadow-premium-hover:hover {
+  box-shadow: 0 60px 150px rgba(11, 20, 62, 0.12);
+  transform: translateY(-4px);
+}
+
+/* Luxury Glass Panel */
+.glass-panel {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(11, 20, 62, 0.06);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+  box-shadow: 0 30px 90px rgba(11, 20, 62, 0.04);
+}
+
+/* Glowing environments */
+.glow-ivory {
+  background: radial-gradient(circle at center, rgba(244, 236, 221, 0.8) 0%, rgba(246, 240, 229, 0) 70%);
+}
+
+.glow-blue {
+  background: radial-gradient(circle at center, rgba(0, 0, 255, 0.03) 0%, rgba(0, 0, 255, 0) 70%);
+}
+
+/* Elegant custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 20, 62, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 20, 62, 0.2);
+}
+
+/* Premium Metallic Shine/Lustre Animation */
+@keyframes textShine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-text-shine {
+  background-size: 200% auto;
+  animation: textShine 4s linear infinite;
+}
+
+/* Smooth 3D Floating Animations for Mockup Elements */
+@keyframes floatMockup {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes floatMockupSlow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-float-mockup {
+  animation: floatMockup 5s ease-in-out infinite;
+}
+
+.animate-float-mockup-slow {
+  animation: floatMockupSlow 7s ease-in-out infinite;
+}
+
+@keyframes borderBeam {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-border-beam {
+  stroke-dasharray: 140 560;
+  animation: borderBeam 4s linear infinite;
+}
+
+.card-icon-container {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.55) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.16), 
+    0 8px 18px rgba(0, 0, 0, 0.12), 
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .card-icon-container {
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.28), 
+    0 16px 32px rgba(0, 0, 0, 0.2), 
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+/* Lenis Smooth Scroll Integration */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis-target {
+  scroll-behavior: auto !important;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Infinite Marquee for Trusted Logos */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+/* Magnet Lines Component Styles */
+.magnetLines-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.magnetLines-container span {
+  display: block;
+  transform-origin: center;
+  will-change: transform;
+  transform: rotate(var(--rotate));
+}
+

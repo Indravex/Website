@@ -1,0 +1,8 @@
+{
+  "name": "Indravex Technologies",
+  "description": "Enterprise digital infrastructure, artificial intelligence engineering, and high-performance product consultancy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
