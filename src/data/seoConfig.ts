@@ -205,5 +205,37 @@ export const SEO_CONFIGS: Record<string, SEOProps> = {
         "url": "https://www.indravex.com/contact"
       }
     ]
+  },
+  "/industries": {
+    title: "Industries We Serve | Enterprise Tech Solutions | Indravex Technologies",
+    description: "Custom software engineering, AI automation, and cloud platforms for E-commerce, BFSI, Healthcare, Hospitality, Food & Restaurant, HR, Education, Mobility, and Events.",
+    keywords: "Industries We Serve, E-commerce Software, BFSI Tech Solutions, Healthcare Software, Hospitality Tech, HR Software Solutions, Logistics Software",
+    canonicalUrl: "https://www.indravex.com/industries",
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.indravex.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.indravex.com/industries" }
+        ]
+      }
+    ]
+  },
+  "/portfolio": {
+    title: "Explore Our Portfolio | Software Case Studies | Indravex Technologies",
+    description: "Explore our software portfolio: custom E-commerce platforms, BFSI portals, Hospital Management Systems, Food delivery tech, HRMS, LMS, Mobility apps, and Event ticketing systems.",
+    keywords: "Indravex Portfolio, Software Case Studies, E-commerce Platforms, Hospital Management System, BFSI Software, Fleet Management App",
+    canonicalUrl: "https://www.indravex.com/portfolio",
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.indravex.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://www.indravex.com/portfolio" }
+        ]
+      }
+    ]
   }
 };

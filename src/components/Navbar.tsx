@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Cpu, Layers, Radio, HelpCircle, Send } from "lucide-react";
+import { Cpu, Layers, Radio, HelpCircle, Send, Building2, Briefcase } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,9 +22,9 @@ export default function Navbar() {
 
       if (currentScrollY <= 40) {
         setVisible(true);
-      } else if (currentScrollY > lastScrollY + 5) {
+      } else if (currentScrollY > lastScrollY + 1) {
         setVisible(false);
-      } else if (currentScrollY < lastScrollY - 5) {
+      } else if (currentScrollY < lastScrollY - 1) {
         setVisible(true);
       }
 
@@ -37,6 +37,8 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Services", href: "/services", icon: Layers },
+    { name: "Industries", href: "/industries", icon: Building2 },
+    { name: "Portfolio", href: "/portfolio", icon: Briefcase },
     { name: "About Us", href: "/about-us", icon: Cpu },
     { name: "FAQs", href: "/faqs", icon: HelpCircle },
     { name: "Contact Us", href: "/contact", icon: Send }

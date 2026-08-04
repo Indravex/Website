@@ -198,10 +198,25 @@ export default function Footer() {
                 <h3 className="font-serif font-extrabold text-[14px] sm:text-[15px] text-[#0B143E] tracking-tight">Company</h3>
               </div>
               <ul className="flex flex-col gap-3 text-[12px] sm:text-[13px] text-[#1E293B] font-medium">
-                {["About Us", "Our Work", "Careers", "Leadership", "Our Process", "Contact Us"].map((link) => (
-                  <li key={link} className="flex items-center gap-1 hover:text-[#0000FF] hover:underline decoration-1 transition-colors cursor-pointer group">
+                {[
+                  { name: "About Us", href: "/about-us" },
+                  { name: "Our Work", href: "/portfolio" },
+                  { name: "Careers", href: "/contact" },
+                  { name: "Leadership", href: "/about-us" },
+                  { name: "Our Process", href: "/industries" },
+                  { name: "Contact Us", href: "/contact" }
+                ].map((item) => (
+                  <li
+                    key={item.name}
+                    onClick={() => {
+                      window.history.pushState({}, "", item.href);
+                      window.dispatchEvent(new PopStateEvent('popstate'));
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="flex items-center gap-1 hover:text-[#0000FF] hover:underline decoration-1 transition-colors cursor-pointer group"
+                  >
                     <ChevronRight className="w-3.5 h-3.5 text-[#0000FF] shrink-0 transform group-hover:translate-x-0.5 transition-transform" />
-                    <span>{link}</span>
+                    <span>{item.name}</span>
                   </li>
                 ))}
               </ul>

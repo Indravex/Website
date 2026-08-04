@@ -18,14 +18,14 @@ export default function HealthcareCTA() {
           <div className={styles.eyebrow}>Let&apos;s Connect</div>
           
           <h2 className={styles.sectionTitle}>
-            Let&apos;s Build Better IT Environments
+            Let&apos;s Build Better <br className="hidden sm:inline" /> IT Environments
           </h2>
 
           <div className={styles.ornament}>
             <i />
           </div>
 
-          <p className="font-sans text-[15px] text-[#5C5C5C] leading-[1.7] mt-5 mb-8 font-medium">
+          <p className="font-sans text-[15px] text-[#5C5C5C] leading-[1.65] mt-4 mb-6 font-medium max-w-[480px]">
             Partner with us to create digital products and cloud architectures that elevate your business and outpace the competition.
           </p>
 

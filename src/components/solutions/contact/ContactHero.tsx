@@ -32,7 +32,10 @@ export default function ContactHero() {
           </h1>
 
           <p className={`${styles.heroCopy} mx-auto text-center`}>
-            Whether you want to audit your existing systems, design a next-gen cloud architecture, or augment your engineering teams, our technical directors are ready to consult.
+            Email :  indravextechnologies@gmail.com 
+            <br />
+             Mobile no : +91 7666506689
+             <br />
           </p>
 
           {/* Chips styled with 3D glass cards */}

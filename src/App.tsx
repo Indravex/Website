@@ -39,6 +39,15 @@ import ContactHero from "./components/solutions/contact/ContactHero";
 import ContactFormBlock from "./components/solutions/contact/ContactFormBlock";
 import ContactTrust from "./components/solutions/contact/ContactTrust";
 
+import IndustriesHero from "./components/solutions/industries/IndustriesHero";
+import IndustriesGrid from "./components/solutions/industries/IndustriesGrid";
+import IndustriesProcess from "./components/solutions/industries/IndustriesProcess";
+import IndustriesCTA from "./components/solutions/industries/IndustriesCTA";
+
+import PortfolioHero from "./components/solutions/portfolio/PortfolioHero";
+import PortfolioGrid from "./components/solutions/portfolio/PortfolioGrid";
+import PortfolioSummaryCTA from "./components/solutions/portfolio/PortfolioSummaryCTA";
+
 import SEOHead from "./components/SEOHead";
 import { SEO_CONFIGS } from "./data/seoConfig";
 
@@ -167,6 +176,27 @@ function ContactUsPage() {
   );
 }
 
+function IndustriesPage() {
+  return (
+    <div className={healthcareStyles.page}>
+      <IndustriesHero />
+      <IndustriesGrid />
+      <IndustriesProcess />
+      <IndustriesCTA />
+    </div>
+  );
+}
+
+function PortfolioPage() {
+  return (
+    <div className={healthcareStyles.page}>
+      <PortfolioHero />
+      <PortfolioGrid />
+      <PortfolioSummaryCTA />
+    </div>
+  );
+}
+
 function Subpage({ title }: { title: string }) {
   return (
     <div className="min-h-screen bg-[#FAF9F6] text-[#0B143E] flex flex-col items-center justify-center p-6 relative">
@@ -242,17 +272,40 @@ export default function App() {
   const getPageTitle = (path: string) => {
     const norm = getNormalizedPath(path);
     switch (norm) {
-      case "/services": return "Services";
-      case "/about-us": return "About Us";
+      case "/services":
+      case "/service": return "Services";
+      case "/industries":
+      case "/industries-we-serve": return "Industries We Serve";
+      case "/portfolio":
+      case "/our-work": return "Explore Our Portfolio";
+      case "/about-us":
+      case "/about": return "About Us";
       case "/hospitality": return "Hospitality";
-      case "/faqs": return "FAQs";
-      case "/contact": return "Contact Us";
+      case "/faqs":
+      case "/faq": return "FAQs";
+      case "/contact":
+      case "/contact-us": return "Contact Us";
       default: return "";
     }
   };
 
+  const isServices = normalizedPath === "/services" || normalizedPath === "/service";
+  const isIndustries = normalizedPath === "/industries" || normalizedPath === "/industries-we-serve";
+  const isPortfolio = normalizedPath === "/portfolio" || normalizedPath === "/our-work";
+  const isAbout = normalizedPath === "/about-us" || normalizedPath === "/about";
+  const isHospitality = normalizedPath === "/hospitality";
+  const isFaqs = normalizedPath === "/faqs" || normalizedPath === "/faq";
+  const isContact = normalizedPath === "/contact" || normalizedPath === "/contact-us";
+
   const isSubpage = getPageTitle(normalizedPath) !== "";
-  const activeSeoConfig = SEO_CONFIGS[normalizedPath] || SEO_CONFIGS["/"];
+  const activeSeoConfig = SEO_CONFIGS[normalizedPath] ||
+    (isServices ? SEO_CONFIGS["/services"] : undefined) ||
+    (isIndustries ? SEO_CONFIGS["/industries"] : undefined) ||
+    (isPortfolio ? SEO_CONFIGS["/portfolio"] : undefined) ||
+    (isAbout ? (SEO_CONFIGS["/about-us"] || SEO_CONFIGS["/about"]) : undefined) ||
+    (isFaqs ? SEO_CONFIGS["/faqs"] : undefined) ||
+    (isContact ? SEO_CONFIGS["/contact"] : undefined) ||
+    SEO_CONFIGS["/"];
 
   return (
     <div className="relative min-h-screen overflow-x-hidden selection:bg-accent-blue selection:text-white" id="localhost-app-root">
@@ -263,15 +316,19 @@ export default function App() {
 
       {/* Main Page Blocks */}
       <main className="relative z-10" id="localhost-app-main">
-        {normalizedPath === "/services" ? (
+        {isServices ? (
           <ServicesPage />
-        ) : normalizedPath === "/about-us" ? (
+        ) : isIndustries ? (
+          <IndustriesPage />
+        ) : isPortfolio ? (
+          <PortfolioPage />
+        ) : isAbout ? (
           <AboutUsPage />
-        ) : normalizedPath === "/hospitality" ? (
+        ) : isHospitality ? (
           <HospitalityPage />
-        ) : normalizedPath === "/faqs" ? (
+        ) : isFaqs ? (
           <FAQPage />
-        ) : normalizedPath === "/contact" ? (
+        ) : isContact ? (
           <ContactUsPage />
         ) : isSubpage ? (
           <Subpage title={getPageTitle(normalizedPath)} />

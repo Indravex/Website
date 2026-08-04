@@ -3,43 +3,37 @@ import Separator from "./Separator";
 export default function Hero() {
   return (
     <section
-      className="relative z-20 min-h-[90vh] flex flex-col justify-center pt-32 pb-28 lg:pb-12 px-6 md:px-12 w-full"
+      className="relative z-20 min-h-[90vh] flex flex-col justify-center pt-28 lg:pt-32 pb-24 lg:pb-20 px-6 md:px-12 w-full"
       id="hero-section"
     >
 
-
-
-
       {/* Main Grid Layout */}
-      <div className="max-w-[1320px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div className="max-w-[1320px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center relative z-10">
 
         {/* Left Side Content Column */}
-        <div className="w-full lg:col-span-7 flex flex-col items-start text-left lg:-translate-y-15 lg:-translate-x-4">
+        <div className="w-full lg:col-span-7 flex flex-col items-start text-left lg:-translate-y-8">
 
           {/* Eyebrow - Clean and uppercase */}
-          <span className="font-sans text-[11px] sm:text-[12px] font-bold text-[#004BFF] tracking-[0.22em] uppercase block mb-6 mt-6 relative z-10">
+          <span className="font-sans text-[11px] sm:text-[12px] font-bold text-[#004BFF] tracking-[0.22em] uppercase block mb-4 mt-2 relative z-10">
             Engineering Digital Intelligence
           </span>
 
-          {/* Headline - Bold serif + sans-serif blue accent (matches Image 1 font & weight, slightly elongated, professional high-contrast stroke) */}
+          {/* Headline - 2 Lines format */}
           <h1
-            className="font-serif text-[32px] sm:text-[48px] md:text-[62px] leading-[1.1] sm:leading-[1.04] font-extrabold tracking-normal mb-6 text-[#000000]"
+            className="font-serif text-[32px] sm:text-[46px] md:text-[56px] leading-[1.1] sm:leading-[1.05] font-extrabold tracking-normal mb-5 text-[#000000]"
             style={{ WebkitTextStroke: '0.55px #000000' }}
           >
-            We build digital <br className="hidden sm:inline" />
-            products that <br className="hidden sm:inline" />
-            drive <span className="text-[#004BFF] inline-block" style={{ WebkitTextStroke: '0.55px #004BFF' }}>real impact.</span>
+            We build digital products <br className="hidden sm:inline" />
+            that drive <span className="text-[#004BFF] inline-block" style={{ WebkitTextStroke: '0.55px #004BFF' }}>real impact.</span>
           </h1>
 
-          {/* Subtitle / Paragraph - clean style with matching line wrapping */}
-          <p className="font-sans text-[13.5px] sm:text-[14.5px] text-[#4D4D4D] leading-[1.6] font-medium max-w-[460px] mb-8">
-            From idea to scale — we design, develop, automate and <br className="hidden sm:inline" />
-            optimize digital solutions that help businesses grow, <br className="hidden sm:inline" />
-            innovate and lead.
+          {/* Subtitle / Paragraph */}
+          <p className="font-sans text-[13.5px] sm:text-[14.5px] text-[#4D4D4D] leading-[1.6] font-medium max-w-[480px] mb-6">
+            From idea to scale — we design, develop, automate and optimize digital solutions that help businesses grow, innovate and lead.
           </p>
 
-          {/* Buttons CTA Container (shifted slightly upward) */}
-          <div className="flex flex-wrap items-center gap-4 mb-10 transform -translate-y-[5px]">
+          {/* Buttons CTA Container */}
+          <div className="flex flex-wrap items-center gap-4 mb-8">
             {/* Primary Button: Dark Navy */}
             <a
               href="#capabilities"
@@ -60,15 +54,12 @@ export default function Hero() {
 
             {/* Secondary Button: White with Dark Border */}
             <a
-              href="#projects"
+              href="/portfolio"
               onClick={(e) => {
                 e.preventDefault();
-                const target = document.getElementById("projects");
-                if (target) {
-                  const lenis = (window as any).lenis;
-                  if (lenis) lenis.scrollTo(target, { offset: -80, duration: 1.2 });
-                  else target.scrollIntoView({ behavior: "smooth" });
-                }
+                window.history.pushState({}, "", "/portfolio");
+                window.dispatchEvent(new PopStateEvent('popstate'));
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className="px-5.5 py-3 bg-white border border-[#0B143E] hover:bg-[#F0F4FF] text-[#0B143E] font-sans text-[14px] font-semibold rounded-[8px] transition-all duration-300 flex items-center gap-2 cursor-pointer"
             >
@@ -77,8 +68,8 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Trusted Companies Section (shifted slightly upward, continuous sliding horizontal marquee) */}
-          <div className="flex flex-col items-start gap-3.5 mb-4 transform -translate-y-[6px] w-full max-w-[480px]">
+          {/* Trusted Companies Section */}
+          <div className="flex flex-col items-start gap-2.5 w-full max-w-[480px]">
             <span className="font-sans text-[11px] font-extrabold text-[#5C5C5C] tracking-[0.2em] uppercase">
               Trusted by Innovative Companies
             </span>
@@ -163,11 +154,10 @@ export default function Hero() {
         </div>
 
         {/* Right Side Column: Floating Mockup Composition */}
-        <div className="hidden lg:flex lg:col-span-5 relative h-[500px] md:h-[600px] w-full items-center justify-center select-none mt-12 lg:mt-0 lg:-translate-y-12 lg:-translate-x-16">
+        <div className="hidden lg:flex lg:col-span-5 relative h-[480px] md:h-[540px] w-full items-center justify-center select-none mt-12 lg:mt-0 lg:-translate-y-6">
           <div className="relative w-full h-full max-w-[500px]">
-            {/* Small 3D Grooved Dot Grid behind base image, bottom right area (shifted right & scaled down more) */}
+            {/* Small 3D Grooved Dot Grid behind base image */}
             <div className="absolute bottom-[20%] right-[-32%] w-[90px] h-[90px] opacity-35 pointer-events-none z-[5] select-none">
-              {/* White shadow dots */}
               <div
                 className="absolute inset-0 translate-x-[1px] translate-y-[1px]"
                 style={{
@@ -175,7 +165,6 @@ export default function Hero() {
                   backgroundSize: "10px 10px",
                 }}
               />
-              {/* Dark blue dots */}
               <div
                 className="absolute inset-0"
                 style={{
@@ -185,7 +174,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* 1. Base Pedestal (podium) - at the bottom center (stationary, shifted left and down slightly) */}
+            {/* 1. Base Pedestal (podium) */}
             <div className="absolute bottom-[-3%] left-[47%] -translate-x-1/2 w-[120%] sm:w-[790px] z-10">
               <img
                 src="https://res.cloudinary.com/dcryxjtb3/image/upload/v1785053836/bottom_base-Photoroom_bq4dej.png"
@@ -194,7 +183,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* 2. Floating Laptop - centered (enlarged further to 620px, shifted left and upward further, nudged down & right) */}
+            {/* 2. Floating Laptop */}
             <div
               className="absolute top-[9%] left-[45%] -translate-x-1/2 w-[110%] sm:w-[620px] z-20 animate-float-mockup"
               style={{ animationDelay: '0.4s' }}
@@ -206,9 +195,8 @@ export default function Hero() {
               />
             </div>
 
-            {/* Small 3D Grooved Dot Grid behind Card 1, top left area (new dot grid, shifted down & left further) */}
+            {/* Small 3D Grooved Dot Grid behind Card 1 */}
             <div className="absolute top-[3%] left-[-8%] w-[90px] h-[90px] opacity-35 pointer-events-none z-[10] select-none">
-              {/* White shadow dots */}
               <div
                 className="absolute inset-0 translate-x-[1px] translate-y-[1px]"
                 style={{
@@ -216,7 +204,6 @@ export default function Hero() {
                   backgroundSize: "10px 10px",
                 }}
               />
-              {/* Dark blue dots */}
               <div
                 className="absolute inset-0"
                 style={{
@@ -226,7 +213,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* 3. Card 1: AI & Automation - top left (scaled down, shifted further right & up) */}
+            {/* 3. Card 1: AI & Automation */}
             <div
               className="absolute top-[-3%] left-[15%] w-[58%] sm:w-[280px] z-15 animate-float-mockup-slow"
               style={{ animationDelay: '1.2s' }}
@@ -238,7 +225,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* 4. Card 2: Web Development - middle left (shifted slightly leftward and scaled down) */}
+            {/* 4. Card 2: Web Development */}
             <div
               className="absolute top-[24%] left-[-28%] w-[58%] sm:w-[290px] z-30 animate-float-mockup"
               style={{ animationDelay: '0.8s' }}
@@ -250,7 +237,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* 5. Card 3: Custom Development - bottom right (overlapping bottom-right keyboard/base, shifted downward) */}
+            {/* 5. Card 3: Custom Development */}
             <div
               className="absolute bottom-[12%] right-[-6%] w-[62%] sm:w-[310px] z-30 animate-float-mockup-slow"
               style={{ animationDelay: '1.6s' }}
@@ -265,9 +252,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats Bar Card - Full-Width Handcrafted Editorial Style (Matches Image 1 layout, slightly pulled in on ends) */}
+        {/* Stats Bar Card - Full-Width Handcrafted Editorial Style */}
         <div
-          className="lg:col-span-12 mt-12 lg:-mt-9 w-full max-w-[1140px] mx-auto py-6 px-4 sm:px-12 rounded-[16px] grid grid-cols-2 md:grid-cols-4 gap-x-2 sm:gap-x-6 gap-y-6 md:gap-y-0 relative z-30 transform lg:-translate-y-22 bg-white border border-[#E2EAF8]"
+          className="lg:col-span-12 mt-2 lg:-mt-10 w-full max-w-[1140px] mx-auto py-6 px-4 sm:px-12 rounded-[16px] grid grid-cols-2 md:grid-cols-4 gap-x-2 sm:gap-x-6 gap-y-6 md:gap-y-0 relative z-30 transform lg:-translate-y-10 bg-white border border-[#E2EAF8]"
           style={{
             boxShadow: '0 8px 30px rgba(11, 20, 62, 0.04), 0 0 20px rgba(0, 75, 255, 0.05), inset 0 0 8px rgba(0, 75, 255, 0.015)'
           }}
